@@ -8,7 +8,7 @@ class Paper {
     } 
     this.radius=radius
     this.body=Bodies.circle(x,y,radius,options) ;
-    World.add(woorld,this.body);
+    World.add(world,this.body);
   }
 display(){
    fill("blue") ;

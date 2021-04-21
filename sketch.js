@@ -16,15 +16,15 @@ function setup() {
 	engine = Engine.create();
 	world = engine.world;
 
-	line1=createSprite(720,390,100,10);
+	line1=createSprite(720,390,80,10);
 	line1.shapeColor="red";
-	line2=createSprite(700,390,10,100);
+	line2=createSprite(680,390,10,100);
 	line2.shapeColor="red";
-	line3=createSprite(750,390,10,100);
+	line3=createSprite(760,390,10,100);
 	line3.shapeColor="red";
 
-	dustbin1=new dustbin(720,390,100,10);
-	paper1=new paper(100,300,10);
+	dustbin1=new Dustbin(720,390,100,10);
+	paper1=new Paper(100,300,10);
 	ground=Bodies.rectangle(width/2,400,width,10 ,{
 		isStatic:true
 	});
@@ -52,9 +52,9 @@ function draw() {
 }
 function keyPressed(){
 if(keyCode=== UP_ARROW){
-	Matter.Body.applyForce(paper.body,paper.body.position,{
+	Matter.Body.applyForce(paper1.body,paper1.body.position,{
 		x:12 ,
-		y: -13
+		y:-13
 
 	});
 }
